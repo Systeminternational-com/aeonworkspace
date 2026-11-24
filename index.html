@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AEON">
+<meta name="description" content="AEON private team workspace">
+<title>AEON Workspace</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- LOGIN -->
+<section id="login" hidden>
+  <form id="loginForm" class="lf">
+    <div class="appicon" aria-hidden="true">A</div>
+    <h1>AEON Workspace</h1>
+    <p class="mu">Sign in with your invited account.</p>
+    <div class="grp">
+      <label class="fr"><span>Email</span><input id="email" type="email" placeholder="name@company.com" required autocomplete="username"></label>
+      <label class="fr"><span>Password</span><input id="pass" type="password" placeholder="Required" required autocomplete="current-password"></label>
+    </div>
+    <p id="loginErr" class="err" role="alert"></p>
+    <button class="btn wide" type="submit" id="loginBtn">Sign in</button>
+    <button class="link" type="button" id="reset">Forgot password?</button>
+  </form>
+</section>
+
+<!-- APP SHELL -->
+<div id="shell" hidden>
+  <nav id="side" aria-label="Main">
+    <div class="brand"><span class="appicon sm" aria-hidden="true">A</span><span class="t">AEON</span></div>
+    <a href="#dashboard" data-v="dashboard" title="Home"><span class="i" data-i="home"></span><span class="t">Home</span></a>
+    <a href="#inbox" data-v="inbox" title="Inbox"><span class="i" data-i="inbox"></span><span class="t">Inbox</span><b class="nb" data-ibell hidden></b></a>
+    <a href="#chat" data-v="chat" title="Chat"><span class="i" data-i="chat"></span><span class="t">Chat</span></a>
+    <a href="#tasks" data-v="tasks" title="Tasks"><span class="i" data-i="tasks"></span><span class="t">Tasks</span></a>
+    <a href="#departments" data-v="departments" title="Teams"><span class="i" data-i="teams"></span><span class="t">Teams</span></a>
+    <a href="#announcements" data-v="announcements" title="News"><span class="i" data-i="news"></span><span class="t">News</span></a>
+    <a href="#resources" data-v="resources" title="Docs"><span class="i" data-i="docs"></span><span class="t">Docs</span></a>
+    <a href="#members" data-v="members" title="People"><span class="i" data-i="user"></span><span class="t">People</span></a>
+    <a href="#notifications" data-v="notifications" title="Alerts"><span class="i" data-i="bell"></span><span class="t">Alerts</span><b class="nb" data-bell hidden></b></a>
+    <a href="#profile" data-v="profile" title="My profile"><span class="i" data-i="id"></span><span class="t">My Profile</span></a>
+    <a href="#admin" data-v="admin" id="adminNav" title="Admin" hidden><span class="i" data-i="admin"></span><span class="t">Admin</span></a>
+    <span class="grow"></span>
+    <button id="inst" title="Install app" hidden><span class="i" data-i="down"></span><span class="t">Install app</span></button>
+    <button id="sset" class="me" aria-label="Profile and settings" title="Profile and settings"></button>
+  </nav>
+  <main id="view" tabindex="-1"></main>
+  <nav id="tabs" aria-label="Tabs">
+    <a href="#dashboard" data-t="dashboard"><span class="i" data-i="home"></span><span>Home</span></a>
+    <a href="#chat" data-t="chat"><span class="i" data-i="chat"></span><span>Chat</span></a>
+    <a href="#tasks" data-t="tasks"><span class="i" data-i="tasks"></span><span>Tasks</span></a>
+    <a href="#departments" data-t="departments"><span class="i" data-i="teams"></span><span>Teams</span></a>
+    <a href="#more" data-t="more"><span class="i" data-i="more"></span><span>More</span><b class="nb" data-bsum hidden></b></a>
+  </nav>
+</div>
+<script type="module" src="aeonapp.js"></script>
+</body>
+</html>
