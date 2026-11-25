@@ -1,6 +1,6 @@
 {
   "name": "AEON Workspace",
-  "short_name": "AEON",
+  "short_name": "Aeon",
   "description": "AEON private team workspace: chat, tasks, teams and announcements.",
   "start_url": "./index.html",
   "scope": "./",
